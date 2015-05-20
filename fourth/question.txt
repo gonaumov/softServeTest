@@ -1,0 +1,4 @@
+4. Take your implementation of FooBar and demonstrate how you would test the code (programmatically). 
+You are free to refactor your previous answer.
+
+

@@ -1,0 +1,12 @@
+2. What will be the output of the following code:  Explain your answer.
+
+console.log(false == '0')
+
+console.log(false === '0')
+
+In this first case the output will be 
+true, because the operator == test only values of
+the operands and values of the operands is 
+can be autoconverted. In second case the result 
+will be false because  === test types 
+also. 

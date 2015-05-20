@@ -1,0 +1,9 @@
+5. Explain Function.prototype.bind
+Bind allows us to determine the context (this) of the function before call function.
+Often we use "bind" when we need to set another context to function used in setTimeout
+because by default "this" into function used in setTimeout is current window object.
+
+setTimeout(function() {
+ // this here will be 
+ // equal to 5.
+}.bind(5), 1000);

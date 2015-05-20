@@ -1,0 +1,11 @@
+7. Briefly ​list and define the components of an MVVM architecture​. 
+
+
+Model - Model represents a data with application will work.
+For example user.  Model just contains information. It is good to not
+has behaviour
+View -  this is the user interface of the application and users actually interact with it.
+
+ViewModel - this is something that can act as a data converter. 
+ViewModel can execute command from the vew to Model.
+

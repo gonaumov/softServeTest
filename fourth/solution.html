@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://jasmine.github.io/2.0/lib/jasmine.js"></script>
+    <script src="http://jasmine.github.io/2.0/lib/jasmine-html.js"></script>
+    <script src="http://jasmine.github.io/2.0/lib/boot.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://jasmine.github.io/2.0/lib/jasmine.css">
+    <script>
+        // So here we will take a function from previous
+        // task.
+        // if the number is divisible by 3 print out Foo,
+        // if it's divisible by 5 print Bar, if it's divisible
+        // by 3 and 5 print FooBar, otherwise print the number.
+        function FooBar(inputNumber) {
+            if ((inputNumber % 15) === 0) {
+                console.log("Foobar");
+            } else if ((inputNumber % 5) === 0) {
+                console.log("Bar");
+            } else if ((inputNumber % 3) === 0) {
+                console.log("Foo");
+            } else {
+                console.log(inputNumber);
+            }
+        }
+
+        describe('FooBar must working properly for numbers from 1 to 50', function () {
+            it('is called by 3 must print Foo', function () {
+                console.log = jasmine.createSpy("log");
+                FooBar(3);
+                expect(console.log).toHaveBeenCalledWith("Foo");
+            });
+            it('is called by 5 must print Bar', function () {
+                console.log = jasmine.createSpy("log");
+                FooBar(5);
+                expect(console.log).toHaveBeenCalledWith("Bar");
+            });
+            it('is called by 15 must print Foobar', function () {
+                console.log = jasmine.createSpy("log");
+                FooBar(15);
+                expect(console.log).toHaveBeenCalledWith("Foobar");
+            });
+            it('is called by other number must print this number', function () {
+                console.log = jasmine.createSpy("log");
+                FooBar(1);
+                expect(console.log).toHaveBeenCalledWith(1);
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

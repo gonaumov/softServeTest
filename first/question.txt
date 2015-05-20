@@ -1,0 +1,12 @@
+1. What will be the output of the following code:  Explain your answer.
+
+for (var i = 0; i < 5; i++) {
+
+  setTimeout(function() { console.log(i); }, i * 1000 );
+
+}
+
+
+Five times the result will be 5 because in setTimeout code is executed after the loop 
+and variable "i" has a first value which does not satisfy the condition of the cycle (i < 5).
+In this case - 5.
